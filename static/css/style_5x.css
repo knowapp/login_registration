@@ -1,0 +1,45 @@
+html {
+  background-color: #1a1a1a;
+  font-family: 'Open Sans', sans-serif;
+  }
+.display{
+  width: 780px;
+  height: 500px;
+  margin: auto;
+  background-color: white;
+}
+p
+{
+font-family: cursive;
+font-size: large;
+color: #000000;
+background-color: #cfcece;
+}
+h1
+{
+font-family: "Times New Roman",Georgia,serif;
+font-size: 40px;
+text-align: center;
+text-decoration: underline;
+color: #2f2828;
+background-color: #a3bebe;
+}
+input[type="text"],
+textarea {
+  width:600px;
+  height: 20px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #ccc;
+  }
+input[type="text2"],
+    textarea {
+      width:650px;
+      height: 150px;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #ccc;
+      }
+.fields{
+vertical-align: bottom;
+}

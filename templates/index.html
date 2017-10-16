@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login and Registration
+        </title>
+        <meta name="description" content="">      
+      <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style_5x.css')}}">
+   </head>
+    <body>
+        <div class="display">
+            <h1>Enter your valid email address</h1>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form action='/progressreg' method='POST'>
+                    <input type="hidden" name="action" value="login_table">
+                    <label for="first_name">First Name: <input type="text" name="first_name" id="first_name"></label><br>
+                    <label for="last_name">Last Name: <input type="text" name="last_name" id="last_name"></label><br>
+                    <label for="email">Email: <input type="email" name="email" id="email"></label>
+                    <label for="password">Password: <input type="password" name="password" id="password"></label>
+                    <label for="password_conf">Password: <input type="password" name="password_conf" id="password_conf"></label><br><br>
+                    <input type="submit" value="submit">
+                </form>
+            <p align="center">Email Addresses Entered:</p>
+            <textarea name="text2">
+                {% for x in all_emails: %}
+                    First Name: {{x ['first_name']}}
+                    Last Name: {{x ['last_name']}}
+                    Email: {{x ['email']}}
+                    Created time: {{x ['created_at']}}
+                {% endfor %}
+            </textarea> 
+            <h3><a href="/login">Click here</a> if you are a registered user.</h3>
+        </div>
+    </body>
+</html>
